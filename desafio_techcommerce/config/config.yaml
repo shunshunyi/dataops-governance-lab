@@ -1,0 +1,91 @@
+# ========================================
+# CONFIGURAÇÃO TECHCOMMERCE DATAOPS
+# ========================================
+
+# Caminhos de dados
+data:
+  raw: data/raw
+  processed: data/processed
+  quality: data/quality
+
+# Separadores de CSV
+csv:
+  raw_separator: ','        # Raw files are comma-separated
+  processed_separator: ';'  # Clean files are semicolon-separated
+
+# Great Expectations
+great_expectations:
+  project_dir: gx
+  datasource_name: techcommerce_source
+  checkpoints:
+    main: techcommerce_processed_data_checkpoint
+
+# Datasets
+datasets:
+  clientes:
+    raw_file: clientes.csv
+    clean_file: clientes_clean.csv
+    primary_key: id_cliente
+    schema:
+      id_cliente: int
+      nome: str
+      email: str
+      telefone: str
+      data_nascimento: date
+      cidade: str
+      estado: str
+      data_cadastro: date
+  
+  produtos:
+    raw_file: produtos.csv
+    clean_file: produtos_clean.csv
+    primary_key: id_produto
+    schema:
+      id_produto: int
+      nome_produto: str
+      categoria: str
+      preco: float
+      estoque: int
+      data_criacao: date
+      ativo: bool
+  
+  vendas:
+    raw_file: vendas.csv
+    clean_file: vendas_clean.csv
+    primary_key: id_venda
+    schema:
+      id_venda: int
+      id_cliente: int
+      id_produto: int
+      quantidade: int
+      valor_unitario: float
+      valor_total: float
+      data_venda: date
+      status: str
+  
+  logistica:
+    raw_file: logistica.csv
+    clean_file: logistica_clean.csv
+    primary_key: id_entrega
+    schema:
+      id_entrega: int
+      id_venda: int
+      transportadora: str
+      data_envio: date
+      data_entrega_prevista: date
+      data_entrega_real: date
+      status_entrega: str
+
+# Regras de Qualidade
+quality_rules:
+  completude_threshold: 0.98     # 98% minimum
+  uniqueness_threshold: 1.0      # 100% unique PKs
+  validity_threshold: 0.98       # 98% valid formats
+  consistency_threshold: 0.99    # 99% referential integrity
+  timeliness_threshold: 0.99     # 99% on-time data
+
+# Logging
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: data/quality/pipeline.log

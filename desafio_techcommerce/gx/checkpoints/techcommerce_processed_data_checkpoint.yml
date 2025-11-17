@@ -1,0 +1,40 @@
+name: techcommerce_processed_data_checkpoint
+config_version: 1.0
+template_name:
+module_name: great_expectations.checkpoint
+class_name: SimpleCheckpoint
+run_name_template: '%Y%m%d-%H%M%S-techcommerce-validation'
+expectation_suite_name:
+batch_request: {}
+action_list:
+  - name: store_validation_result
+    action:
+      class_name: StoreValidationResultAction
+  - name: store_evaluation_params
+    action:
+      class_name: StoreEvaluationParametersAction
+  - name: update_data_docs
+    action:
+      class_name: UpdateDataDocsAction
+evaluation_parameters: {}
+runtime_configuration: {}
+validations:
+  - batch_request:
+      datasource_name: techcommerce_source
+      data_asset_name: clientes_clean
+    expectation_suite_name: techcommerce.clientes.warning
+  - batch_request:
+      datasource_name: techcommerce_source
+      data_asset_name: produtos_clean
+    expectation_suite_name: techcommerce.produtos.warning
+  - batch_request:
+      datasource_name: techcommerce_source
+      data_asset_name: vendas_clean
+    expectation_suite_name: techcommerce.vendas.warning
+  - batch_request:
+      datasource_name: techcommerce_source
+      data_asset_name: logistica_clean
+    expectation_suite_name: techcommerce.logistica.warning
+profilers: []
+ge_cloud_id:
+expectation_suite_ge_cloud_id:

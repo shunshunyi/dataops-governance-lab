@@ -1,0 +1,23 @@
+id_entrega	id_venda	transportadora	data_envio	data_entrega_prevista	data_entrega_real	status_entrega
+2001	1001	Correios	2023-03-02	2023-03-05	2023-03-04	Entregue
+2002	1002	Transportadora XYZ	2023-03-03		2023-03-10	Entregue
+2003	1003	Correios	2023-03-04	2023-03-07		Em Trânsito
+2004	1004					Cancelada
+2005	1006	Correios	2023-03-07	2023-03-10	2023-03-09	Entregue
+2006	1007	Transportadora ABC	2023-03-08	2023-03-12	2023-03-11	Entregue
+2007	1008	Correios	2023-03-09	2023-03-12		Em Trânsito
+2008	1009	Transportadora XYZ	2023-03-10	2023-03-14	2023-03-13	Entregue
+2009	1010	Correios	2023-03-11	2023-03-15	2023-03-14	Entregue
+2010	1012	Transportadora ABC	2023-03-13	2023-03-17	2023-03-16	Entregue
+2011	1013	Correios	2023-03-14	2023-03-18	2023-03-17	Entregue
+2012	1015	Transportadora XYZ	2023-03-16	2023-03-20	2023-03-19	Entregue
+2013	1016	Correios	2023-03-17	2023-03-21	2023-03-20	Entregue
+2014	1017	Transportadora ABC	2023-03-18	2023-03-22	2023-03-21	Entregue
+2015	1020	Correios	2023-03-21	2023-03-25	2023-03-24	Entregue
+2016	1021	Transportadora XYZ	2023-03-22	2023-03-26	2023-03-25	Entregue
+2017	1022	Correios	2023-03-23	2023-03-27	2023-03-26	Entregue
+2018	1024	Transportadora ABC	2023-03-25	2023-03-29	2023-03-28	Entregue
+2019	9999	Correios	2023-03-26	2023-03-30		Em Trânsito
+2020	1006	Transportadora XYZ	2023-03-02	2023-03-05	2023-03-04	Entregue
+2021	1007	Correios	2023-02-28	2023-03-03	2023-03-05	Entregue
+2022	1025		2023-03-26	2023-03-30		Pendente

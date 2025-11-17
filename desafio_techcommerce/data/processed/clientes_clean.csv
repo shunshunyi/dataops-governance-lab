@@ -1,0 +1,16 @@
+id_cliente;nome;email;telefone;data_nascimento;cidade
+1;João Silva;joao@email.com;11999887766;1985-03-15;São Paulo
+2;Maria Santos;;11888776655;1990-07-22;Rio de Janeiro
+3;Pedro;;;2000-12-01;Belo Horizonte
+4;NÃO INFORMADO;ana@email.com;11777665544;1995-05-30;São Paulo
+5;Carlos Oliveira;carlos@email.com;11666554433;1988-11-12;Porto Alegre
+6;Ana Costa;ana.costa@gmail.com;11555443322;1992-08-25;Salvador
+7;Roberto Lima;roberto@email.com;11444332211;1980-04-18;Curitiba
+8;Fernanda Santos;;11333221100;1995-09-30;Florianópolis
+9;Marcos Pereira;marcos@email.com;11222110099;1987-12-05;Goiânia
+10;Lucia Oliveira;;11111000999;2010-01-01;Recife
+11;Paulo Silva;paulo@email.com;;1975-06-10;Fortaleza
+12;Sandra Costa;sandra@email.com;11888777666;1983-02-28;Brasília
+13;NÃO INFORMADO;teste@email.com;11777666555;1990-05-15;Manaus
+14;Ricardo Santos;ricardo@email.com;11666555444;1978-10-22;Belém
+15;Juliana Lima;juliana@email.com;11555444333;1992-07-08;Vitória
